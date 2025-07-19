@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     // Step 1: Sync posts from dummy API to DB
-    fetch("/api/syncPosts", {
+    fetch("${process.env.NEXT_PUBLIC_API_BASE}/api/syncPosts", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
