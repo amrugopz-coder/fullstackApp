@@ -62,7 +62,7 @@ export default function PostDetail() {
     setMessage("");
 
     try {
-      const res = await fetch(`/api/post/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/api/post/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
